@@ -14,7 +14,8 @@ import PageWrapper from "@/src/component/page-wrapper";
  */
 const AppShell = ({ children }: { children: React.ReactNode }) => {
   const pathname = usePathname();
-  const hideChrome = pathname === "/welcome";
+  // Hide chrome on landing page now served at root "/" and keep support for legacy "/welcome"
+  const hideChrome = pathname === "/" || pathname === "/welcome";
 
   if (hideChrome) {
     return (
