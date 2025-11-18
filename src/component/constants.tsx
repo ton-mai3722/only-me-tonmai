@@ -23,6 +23,13 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     title: 'Reports',
     path: '/reports',
     icon: <Icon icon="lucide:bar-chart-2" width="24" height="24" />,
+  submenu: true,
+    subMenuItems: [
+      { title: 'Overview', path: '/reports/' },
+      { title: 'Revenue', path: '/reports/revenue' },
+      { title: 'series', path: '/reports/series' },
+      { title: 'User', path: '/reports/user' },
+    ],
   },
   {
     title: 'Settings',

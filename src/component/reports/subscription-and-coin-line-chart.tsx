@@ -39,6 +39,7 @@ const SubscriptionAndCoinLineChart = () => {
     <AreaChart
       style={{ width: '100%', maxWidth: '700px', maxHeight: '70vh', aspectRatio: 1.618 }}
       responsive
+      
       data={monthlyRevenueData}
       margin={{
         top: 20,

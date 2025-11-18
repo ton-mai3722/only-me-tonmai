@@ -1,4 +1,4 @@
-import { Label, Pie, PieChart, Sector, SectorProps, Tooltip } from 'recharts';
+import { Label, Pie, PieChart, Sector, SectorProps, Tooltip, Cell } from 'recharts';
 import { TooltipIndex } from 'recharts/types/state/tooltipSlice';
 
 type Coordinate = {
@@ -83,9 +83,11 @@ const renderActiveShape = ({
 export default function CustomActiveShapePieChart({
   isAnimationActive = true,
   defaultIndex = undefined,
+  colors = ['#dd191d', '#8bc34a'],
 }: {
   isAnimationActive?: boolean;
   defaultIndex?: TooltipIndex;
+  colors?: string[];
 }) {
   return (
     <PieChart
@@ -105,10 +107,13 @@ export default function CustomActiveShapePieChart({
         cy="50%"
         innerRadius="56%"
         outerRadius="70%"
-        fill="#8884d8"
         dataKey="value"
         isAnimationActive={isAnimationActive}
-      />
+      >
+        {data.map((_, index) => (
+          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+        ))}
+      </Pie>
       <Label position="center" fill="#666">
           100%
         </Label>
