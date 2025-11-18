@@ -31,7 +31,6 @@ export default function RootLayout({
         className={`bg-white font-sans antialiased ${geistSans.variable} ${geistMono.variable}`}
       >
         <AppShell>{children}</AppShell>
-
       </body>
     </html>
   );

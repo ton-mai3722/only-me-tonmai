@@ -5,7 +5,7 @@ import { SideNavItem } from './types';
 export const SIDENAV_ITEMS: SideNavItem[] = [
   {
     title: 'Home',
-    path: '/',
+    path: '/home',
     icon: <Icon icon="lucide:home" width="24" height="24" />,
   },
   {
@@ -20,9 +20,9 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     ],
   },
   {
-    title: 'Messages',
-    path: '/messages',
-    icon: <Icon icon="lucide:mail" width="24" height="24" />,
+    title: 'Reports',
+    path: '/reports',
+    icon: <Icon icon="lucide:bar-chart-2" width="24" height="24" />,
   },
   {
     title: 'Settings',
