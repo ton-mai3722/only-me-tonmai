@@ -18,7 +18,9 @@ const TopMoviesChart = () => {
         { rank: 10, title: "Mean Girls", views: 987654, poster: "https://image.tmdb.org/t/p/w200/fbbj3viSUDEGT1fFFMNpHP1iUjw.jpg" }
     ];
 
-    const colors = ['#33691e', '#558b2f', '#689f38', '#7cb342', '#8bc34a', '#9ccc65', '#aed581', '#c5e1a5', '#dcedc8', '#f1f8e9'];
+    // const colors = ['#33691e', '#558b2f', '#689f38', '#7cb342', '#8bc34a', '#9ccc65', '#aed581', '#c5e1a5', '#dcedc8', '#33691e'];
+    const colors = ['#33691e', '#558b2f', '#689f38', '#7cb342', '#8bc34a'];
+
 
     const formatViews = (views: any) => {
         if (views >= 1000000) {
@@ -91,7 +93,7 @@ const TopMoviesChart = () => {
     };
 
     return (
-        <div className="p-6">
+        <div className="p-6" >
             {/* Header */}
             <div className="mb-6 pb-4 ">
                 <div className="flex items-center justify-between">

@@ -5,7 +5,6 @@ import ContentHitsBarChart from '@/src/component/reports/contents-hits-bar-chart
 import SearchBarChart from '@/src/component/reports/search-bar-chart';
 import SubscriptionAndCoinLineChart from '@/src/component/reports/subscription-and-coin-line-chart';
 import SubscriptionAndCoinPieChart from '@/src/component/reports/subscription-and-coin-pie-chart';
-import { Row } from 'antd';
 
 import TopMoviesChart from '@/src/component/reports/top-hits-series';
 

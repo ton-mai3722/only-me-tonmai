@@ -27,7 +27,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     subMenuItems: [
       { title: 'Overview', path: '/reports/' },
       { title: 'Revenue', path: '/reports/revenue' },
-      { title: 'series', path: '/reports/series' },
+      { title: 'Series', path: '/reports/series' },
       { title: 'User', path: '/reports/user' },
     ],
   },
