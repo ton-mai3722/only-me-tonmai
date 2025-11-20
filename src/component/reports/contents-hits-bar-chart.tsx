@@ -49,14 +49,14 @@ const data = [
 const ContentHitsBarChart = () => {
   return (
     <BarChart
-      style={{ width: '100%', maxHeight: '50vh', aspectRatio: '16/9' }}
+      style={{ width: '100%', maxHeight: '50vh', aspectRatio: '1.6' }}
       responsive      
       data={data}
     >
       <XAxis dataKey="name" />
       <YAxis width="auto" />
       <Tooltip />
-      <Bar dataKey="pv" fill="#60ff82ff" activeBar={<Rectangle fill="Red" />} />
+      <Bar dataKey="pv" fill="#60ff82ff"  />
     </BarChart>
   );
 };
