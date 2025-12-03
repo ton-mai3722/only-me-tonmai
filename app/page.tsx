@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import LiquidEther from "@/components/LiquidEther";
+import Galaxy from "@/components/Galaxy";
 
 export const metadata = {
   title: "Welcome | Only Me",
@@ -9,9 +10,9 @@ export const metadata = {
 
 export default function Landing() {
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative w-full h-screen bg-black">
       <div className="absolute inset-0 z-0">
-        <LiquidEther
+        {/* <LiquidEther
           colors={["#110b11", "#B4F400", "#859A87"]}
           mouseForce={20}
           cursorSize={100}
@@ -27,6 +28,15 @@ export default function Landing() {
           takeoverDuration={0.25}
           autoResumeDelay={3000}
           autoRampDuration={0.2}
+        /> */}
+        <Galaxy
+          mouseRepulsion={true}
+          mouseInteraction={true}
+          density={1.5}
+          glowIntensity={0.5}
+          saturation={0.8}
+          hueShift={240}
+          twinkleIntensity={2}
         />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">

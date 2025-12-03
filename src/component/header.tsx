@@ -1,24 +1,27 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 
-import Link from 'next/link'
-import { useSelectedLayoutSegment } from 'next/navigation'
+import Link from "next/link";
+import { useSelectedLayoutSegment } from "next/navigation";
 
-import useScroll from '../hooks/use-scroll'
-import { cn } from '../lib/utils'
+import useScroll from "../hooks/use-scroll";
+import { cn } from "../lib/utils";
+import { ThemeToggle } from "./theme-toggle";
 
 const Header = () => {
-    const scrolled = useScroll(50);
-    const segment = useSelectedLayoutSegment();
+  const scrolled = useScroll(50);
+  const segment = useSelectedLayoutSegment();
   return (
-     <div
+    <div
       className={cn(
-        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
+        `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200 dark:border-gray-800`,
         {
-          'border-b border-gray-200 bg-white/75 backdrop-blur-lg': scrolled,
-          'border-b border-gray-200 bg-white': segment,
-        },
+          "border-b border-gray-200 bg-white/75 backdrop-blur-lg dark:border-gray-800 dark:bg-gray-950/75":
+            scrolled,
+          "border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950":
+            segment,
+        }
       )}
     >
       <div className="flex h-[47px] items-center justify-between px-4">
@@ -32,14 +35,15 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex md:items-center md:space-x-4">
+          <ThemeToggle />
           <div className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-center text-center">
             <span className="font-semibold text-sm">TM</span>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
