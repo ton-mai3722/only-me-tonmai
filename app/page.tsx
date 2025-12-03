@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import LiquidEther from "@/components/LiquidEther";
+import SplitText from "@/components/SplitText";
 import Galaxy from "@/components/Galaxy";
+import ColorBends from "@/components/ColorBends";
 
 export const metadata = {
   title: "Welcome | Only Me",
@@ -40,20 +42,21 @@ export default function Landing() {
         />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
-        <Image
-          src="/welcome-image.png"
-          alt="Welcome"
-          width={240}
-          height={240}
+        <SplitText
+          text="Hello, Everyone!"
+          className="text-[120px] font-semibold text-center text-amber-50"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
         />
-        <h1 className="text-5xl font-extrabold mt-10 tracking-tight text-white">
-          ยินดีต้อนรับ
-        </h1>
-        <p className="mt-6 text-lg text-gray-200 max-w-prose">
-          เริ่มต้นใช้งานแอปเพื่อจัดการโปรเจกต์ของคุณได้เลย เข้าสู่หน้า Home
-          เพื่อดู Side Menu และเนื้อหา.
-        </p>
-        <div className="mt-10 flex flex-col sm:flex-row gap-4">
+
+        <div className="mt-20 flex flex-col sm:flex-row gap-4">
           <Link
             href="/home"
             className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-black font-semibold shadow hover:bg-gray-200 transition-colors"
