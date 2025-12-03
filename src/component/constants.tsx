@@ -13,11 +13,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
     path: "/projects",
     icon: <Icon icon="lucide:folder" width="24" height="24" />,
     submenu: true,
-    subMenuItems: [
-      // { title: 'All', path: '/projects' },
-      { title: "My Projects", path: "/projects/my-projects" },
-      // { title: 'Graphic Design', path: '/projects/graphic-design' },
-    ],
+    subMenuItems: [{ title: "My Projects", path: "/projects/my-projects" }],
   },
   // {
   //   title: 'Reports',
@@ -41,9 +37,14 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   //     { title: "Privacy", path: "/settings/privacy" },
   //   ],
   // },
-  // {
-  //   title: "Help",
-  //   path: "/help",
-  //   icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
-  // },
+  {
+    title: "About",
+    path: "/about",
+    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    icon: <Icon icon="lucide:help-circle" width="24" height="24" />,
+  },
 ];
