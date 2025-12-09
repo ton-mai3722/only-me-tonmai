@@ -10,7 +10,7 @@ export const SIDENAV_ITEMS: SideNavItem[] = [
   },
   {
     title: "Projects",
-    path: "/projects",
+    path: "/project",
     icon: <Icon icon="lucide:folder" width="24" height="24" />,
     submenu: true,
     subMenuItems: [{ title: "My Projects", path: "/projects/my-projects" }],

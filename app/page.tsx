@@ -4,6 +4,8 @@ import LiquidEther from "@/components/LiquidEther";
 import SplitText from "@/components/SplitText";
 import Galaxy from "@/components/Galaxy";
 import ColorBends from "@/components/ColorBends";
+import Orb from "@/components/Orb";
+import StarBorder from "@/components/StarBorder";
 
 export const metadata = {
   title: "Welcome | Only Me",
@@ -31,7 +33,7 @@ export default function Landing() {
           autoResumeDelay={3000}
           autoRampDuration={0.2}
         /> */}
-        <Galaxy
+        {/* <Galaxy
           mouseRepulsion={true}
           mouseInteraction={true}
           density={1.5}
@@ -39,6 +41,12 @@ export default function Landing() {
           saturation={0.8}
           hueShift={240}
           twinkleIntensity={2}
+        /> */}
+        <Orb
+          hoverIntensity={0.5}
+          rotateOnHover={true}
+          hue={0}
+          forceHoverState={false}
         />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center p-4">
@@ -57,17 +65,27 @@ export default function Landing() {
         />
 
         <div className="mt-20 flex flex-col sm:flex-row gap-4">
-          <Link
-            href="/home"
-            className="inline-flex items-center justify-center rounded-lg bg-white px-8 py-4 text-black font-semibold shadow hover:bg-gray-200 transition-colors"
-          >
-            เข้าสู่ Home
+          <Link href="/home">
+            {" "}
+            <StarBorder
+              as="button"
+              className="custom-class"
+              color="cyan"
+              speed="5s"
+            >
+              เข้าสู่ Home
+            </StarBorder>
           </Link>
-          <Link
-            href="/projects"
-            className="inline-flex items-center justify-center rounded-lg border border-gray-300 px-8 py-4 font-medium text-white hover:bg-white hover:text-black transition-colors"
-          >
-            ดู Projects
+
+          <Link href="/projects">
+            <StarBorder
+              as="button"
+              className="custom-class"
+              color="cyan"
+              speed="2s"
+            >
+              Projects
+            </StarBorder>
           </Link>
         </div>
       </div>
